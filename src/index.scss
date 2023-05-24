@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// VARIABLES
+// COLORS p:#087f5b/#3b59d4/#6a4bc6/#c05177 s:#52a58c/#5573ed/#906ef8/#f274a0 btn-p:#077553/#2e45a5/#4f3894/#a84768
+
+$color-btn-primary: #a84768;
+
+$color-primary: #c05177;
+$color-secondary: #f274a0;
+$color-extra: #cd7492;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #dee2e6;
+$color-dark: #495057;
+
+// TYPOGRAPHY
+
+$font-rubik: 'Rubik', sans-serif;
+
+$font-default: 400;
+$font-semi-bold: 500;
+$font-bold: 700;
+
+$font-extra-small: 1rem;
+$font-small: 1.35rem;
+$font-regular: 1.5rem;
+$font-semi: 2rem;
+$font-medium: 2.4rem;
+$font-big: 3.2rem;
+$font-extra-big: 4.8rem;
+$font-large: 6.4rem;
+
+$letter-small: 0.1rem;
+$letter-medium: 0.15rem;
+$letter-big: 0.2rem;
+
+$word-small: 0.1rem;
+$word-medium: 0.15rem;
+$word-big: 0.2rem;
+
+// BORDER-RADIUS
+
+$border-rounded-extra-small: 0.55rem;
+$border-rounded-small: 0.8rem;
+
+// SHADOWS
+
+// SPACING
+
+$padding-extra-small: 0.4rem;
+$padding-small: 1rem;
+$padding-semi: 2rem;
+$padding-medium: 2.4rem;
+$padding-big: 4rem;
+$padding-extra-big: 6rem;
+
+$margin-extra-small: 0.4rem;
+$margin-small: 1rem;
+$margin-semi: 2rem;
+$margin-medium: 2.4rem;
+$margin-big: 3.6rem;
+$margin-extra-big: 5rem;
+$margin-large: 6rem;
