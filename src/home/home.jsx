@@ -18,7 +18,6 @@ import './styles/home.scss';
 
 const Home = () => {
   // CREATE ACC AND LOG INTO ACC
-
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
@@ -370,6 +369,7 @@ const Home = () => {
 
                               <p className='overlay__content-card-location'>
                                 <MdLocationPin className='overlay__content-card-icon' />
+                                <MdLocationPin className='overlay__content-card-icon' />{' '}
                                 {el.tourLocation1}
                               </p>
                             </div>
@@ -377,11 +377,13 @@ const Home = () => {
                             <div className='overlay__content-card'>
                               <p className='overlay__content-card-tour'>
                                 <MdTour className='overlay__content-card-icon' />
+                                <MdTour className='overlay__content-card-icon' />{' '}
                                 {el.favoriteTour2}
                               </p>
 
                               <p className='overlay__content-card-location'>
                                 <MdLocationPin className='overlay__content-card-icon' />
+                                <MdLocationPin className='overlay__content-card-icon' />{' '}
                                 {el.tourLocation2}
                               </p>
                             </div>
@@ -389,11 +391,13 @@ const Home = () => {
                             <div className='overlay__content-card'>
                               <p className='overlay__content-card-tour'>
                                 <MdTour className='overlay__content-card-icon' />
+                                <MdTour className='overlay__content-card-icon' />{' '}
                                 {el.favoriteTour3}
                               </p>
 
                               <p className='overlay__content-card-location'>
                                 <MdLocationPin className='overlay__content-card-icon' />
+                                <MdLocationPin className='overlay__content-card-icon' />{' '}
                                 {el.tourLocation3}
                               </p>
                             </div>
