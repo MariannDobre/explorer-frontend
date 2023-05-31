@@ -12,19 +12,19 @@ function App() {
     <Router>
       <Fragment>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/login" element={<LogIn />} />
-          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/login' element={<LogIn />} />
+          <Route exact path='/signup' element={<SignUp />} />
 
-          <Route exact path="/tours" element={<PrivateRoute />}>
-            <Route exact path="/tours" element={<Tours />} />
+          <Route exact path='/tours' element={<PrivateRoute />}>
+            <Route exact path='/tours' element={<Tours />} />
           </Route>
 
-          <Route exact path="/user/profile" element={<PrivateRoute />}>
-            <Route exact path="/user/profile" element={<UserProfile />} />
+          <Route exact path='/user/profile' element={<PrivateRoute />}>
+            <Route exact path='/user/profile' element={<UserProfile />} />
           </Route>
 
-          <Route exact path="/api/tours" element={<Tours />} />
+          <Route exact path='/api/tours' element={<Tours />} />
         </Routes>
       </Fragment>
     </Router>
