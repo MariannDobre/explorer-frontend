@@ -108,3 +108,21 @@
     background-color: $color-secondary;
   }
 }
+
+@mixin section-titles() {
+  font-size: $font-large;
+  background: linear-gradient(
+    to right,
+    lighten($color-secondary, 15%),
+    lighten($color-primary, 0.5%),
+    lighten($color-primary, 2.5%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: $letter-big;
+  word-spacing: $word-medium;
+  font-weight: $font-semi-bold;
+  margin: $margin-extra-big 0;
+  filter: drop-shadow(0.1rem 0.1rem 0.45rem $color-black);
+}
