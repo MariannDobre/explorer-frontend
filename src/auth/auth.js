@@ -42,7 +42,6 @@ const UserProfile = () => {
               Logged in as <span>{authUser.email}</span>
             </p>
             <button onClick={userSignOut}>Sign Out</button>
-            {/* {console.log(authUser)} */}
           </div>
         ) : (
           <p>You are signed out</p>

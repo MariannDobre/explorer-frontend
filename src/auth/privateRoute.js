@@ -7,7 +7,7 @@ const PrivateRoute = ({ component: path, ...rest }) => {
   const [user] = useAuthState(auth);
 
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to='/login' />;
   }
 
   return <Outlet />;

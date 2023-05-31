@@ -47,64 +47,64 @@ function LogIn() {
 
   return (
     <HelmetProvider>
-      <div className="login__container">
+      <div className='login__container'>
         <Helmet>
           <title>Explorer | LogIn</title>
         </Helmet>
 
         <video
-          className="login__container-bg"
+          className='login__container-bg'
           src={video}
           autoPlay
           loop
           muted
         ></video>
 
-        <form className="login__container-form" onSubmit={loggedIn}>
-          <div className="login__container-form-header">
-            <h2 className="login__container-form-header-title">
+        <form className='login__container-form' onSubmit={loggedIn}>
+          <div className='login__container-form-header'>
+            <h2 className='login__container-form-header-title'>
               Good To Have You Back
             </h2>
-            <p className="login__container-form-header-subtitle">To Explorer</p>
+            <p className='login__container-form-header-subtitle'>To Explorer</p>
           </div>
 
-          <div className="login__container-form-inputs">
-            <label className="login__container-form-inputs-placeholders">
-              <AiFillMail className="login__container-form-inputs-placeholders-icons" />
+          <div className='login__container-form-inputs'>
+            <label className='login__container-form-inputs-placeholders'>
+              <AiFillMail className='login__container-form-inputs-placeholders-icons' />
               E-Mail:
             </label>
             <input
-              type="email"
-              className="login__container-form-inputs-email"
+              type='email'
+              className='login__container-form-inputs-email'
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
 
-            <label className="login__container-form-inputs-placeholders">
-              <RiLock2Fill className="login__container-form-inputs-placeholders-icons" />
+            <label className='login__container-form-inputs-placeholders'>
+              <RiLock2Fill className='login__container-form-inputs-placeholders-icons' />
               Password:
             </label>
             <input
-              type="password"
-              className="login__container-form-inputs-password"
+              type='password'
+              className='login__container-form-inputs-password'
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
 
-          <div className="login__container-form-buttons">
+          <div className='login__container-form-buttons'>
             <button
-              className="login__container-form-buttons-submit"
-              type="submit"
+              className='login__container-form-buttons-submit'
+              type='submit'
             >
               Log Into Account
             </button>
 
-            <Link className="login__container-form-buttons-create" to="/signup">
+            <Link className='login__container-form-buttons-create' to='/signup'>
               Create Account
             </Link>
 
-            <Link className="login__container-form-buttons-without" to="/">
+            <Link className='login__container-form-buttons-without' to='/'>
               Continue Without Account
             </Link>
           </div>

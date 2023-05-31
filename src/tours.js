@@ -31,7 +31,9 @@ function Tours() {
         ) : (
           <div>
             {data.map((tour, index) => (
-              <p key={index}>{tour.name}</p>
+              <p key={index}>
+                {tour.name}, {console.log(index)}
+              </p>
             ))}
           </div>
         )}

@@ -18,7 +18,7 @@
   letter-spacing: $letter-big;
   word-spacing: $word-small;
   font-weight: $font-semi-bold;
-  font-family: $font-rubik;
+  font-family: $font-serif;
   filter: drop-shadow(0.2rem 0.2rem 0.75rem $color-black);
   cursor: pointer;
   transition: all 0.5s;
@@ -95,7 +95,7 @@
   outline: none;
   font-size: $font-medium;
   background-color: $color-btn-primary;
-  padding: $padding-small $padding-extra-big;
+  padding: 1.475rem $padding-extra-big;
   cursor: pointer;
   text-align: center;
   filter: drop-shadow(0.25rem 0.25rem 0.45rem $color-black);
@@ -107,4 +107,22 @@
     transform: scale(1.045);
     background-color: $color-secondary;
   }
+}
+
+@mixin section-titles() {
+  font-size: $font-large;
+  background: linear-gradient(
+    to right,
+    lighten($color-secondary, 15%),
+    lighten($color-primary, 0.5%),
+    lighten($color-primary, 2.5%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: $letter-big;
+  word-spacing: $word-medium;
+  font-weight: $font-semi-bold;
+  margin: $margin-extra-big 0;
+  filter: drop-shadow(0.1rem 0.1rem 0.45rem $color-black);
 }

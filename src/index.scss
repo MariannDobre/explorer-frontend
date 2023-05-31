@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 *,
 *::before,
@@ -12,14 +12,18 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 // VARIABLES
 // COLORS p:#087f5b/#3b59d4/#6a4bc6/#c05177 s:#52a58c/#5573ed/#906ef8/#f274a0 btn-p:#077553/#2e45a5/#4f3894/#a84768
 
-$color-btn-primary: #a84768;
+$color-btn-primary: #077553;
 
-$color-primary: #c05177;
-$color-secondary: #f274a0;
-$color-extra: #cd7492;
+$color-primary: #087f5b;
+$color-secondary: #52a58c;
+$color-extra: #36cea1;
 
 $color-white: #fff;
 $color-black: #000;
@@ -28,7 +32,7 @@ $color-dark: #495057;
 
 // TYPOGRAPHY
 
-$font-rubik: 'Rubik', sans-serif;
+$font-serif: 'Ubuntu', sans-serif;
 
 $font-default: 400;
 $font-semi-bold: 500;
@@ -53,10 +57,8 @@ $word-big: 0.2rem;
 
 // BORDER-RADIUS
 
-$border-rounded-extra-small: 0.55rem;
+$border-rounded-extra-small: 0.4rem;
 $border-rounded-small: 0.8rem;
-
-// SHADOWS
 
 // SPACING
 
@@ -66,6 +68,7 @@ $padding-semi: 2rem;
 $padding-medium: 2.4rem;
 $padding-big: 4rem;
 $padding-extra-big: 6rem;
+$padding-large: 10rem;
 
 $margin-extra-small: 0.4rem;
 $margin-small: 1rem;
