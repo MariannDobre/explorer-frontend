@@ -6,10 +6,24 @@
   padding: $padding-medium;
   position: relative;
 
-  &-svg {
+  &-svg-1 {
     position: absolute;
     z-index: 0;
     top: 116rem;
+    right: 2.4rem;
+  }
+
+  &-svg-2 {
+    position: absolute;
+    z-index: 0;
+    top: 229rem;
+    left: 2.4rem;
+  }
+
+  &-svg-3 {
+    position: absolute;
+    z-index: 0;
+    top: 451rem;
     right: 2.4rem;
   }
 }
@@ -158,7 +172,6 @@
   gap: 4rem;
   padding: $padding-large $padding-big;
   margin-top: $margin-extra-big;
-  margin-top: $margin-big;
 
   &-icon-container {
     display: flex;
@@ -407,11 +420,156 @@
 .section__showcase {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 15rem 0 22.5rem 0;
+
+  &-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    &-title {
+      text-align: center;
+      font-size: $font-big;
+      color: $color-primary;
+      font-weight: $font-semi-bold;
+      letter-spacing: $letter-medium;
+    }
+  }
 
   &-svg {
-    width: 22.5rem;
-    height: 45rem;
+    width: 29.5rem;
+    height: 53.5rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    width: 42.5rem;
+
+    &-title {
+      text-align: center;
+      font-size: $font-big;
+      color: $color-primary;
+      font-weight: $font-semi-bold;
+      letter-spacing: $letter-medium;
+    }
+
+    &-heading {
+      position: relative;
+
+      &::after {
+        content: '';
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 42.5rem;
+        height: 24rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+          to right bottom,
+          darken($gradient-bg-1, 25.5%),
+          darken($gradient-bg-2, 9.5%)
+        );
+        mix-blend-mode: color;
+      }
+
+      &-title {
+        position: absolute;
+        text-transform: uppercase;
+        top: 15rem;
+        right: 1.5rem;
+        font-size: 2.8rem;
+        z-index: 10;
+        color: $color-white;
+        width: 67.5%;
+        text-align: right;
+
+        span {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-secondary,
+            $color-primary
+          );
+          padding: $padding-extra-small $padding-small;
+          letter-spacing: $letter-small;
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+        }
+      }
+
+      &-img {
+        width: 42.5rem;
+        height: 24rem;
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: $padding-big;
+      gap: 4rem;
+
+      &-title {
+        font-size: $font-semi;
+        font-weight: $font-default;
+        text-align: center;
+        color: lighten($color-primary, 5%);
+        letter-spacing: $letter-small;
+        word-spacing: $word-small;
+        line-height: 1.6;
+      }
+
+      &-about {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+        grid-template-columns: 50% 50%;
+        row-gap: 2.4rem;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 0.65rem;
+          padding: $padding-small 0;
+          width: 15rem;
+          height: 5.25rem;
+          font-size: 1.75rem;
+          letter-spacing: $letter-small;
+          word-spacing: $word-small;
+          color: $color-white;
+          border-bottom: 0.15rem solid $color-white;
+        }
+
+        &-icon {
+          font-size: $font-medium;
+          color: darken($color-primary, 13.5%);
+        }
+      }
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 42.5rem;
+      background-color: $color-gray-dark;
+      filter: drop-shadow(0.1rem 0.1rem 0.45rem $color-black);
+    }
   }
 }
 
@@ -480,7 +638,6 @@
         font-size: $font-medium;
         font-weight: $font-semi-bold;
         letter-spacing: $letter-big;
-        letter-spacing: $letter-medium;
         word-spacing: $word-small;
         color: $color-white;
 
@@ -488,7 +645,6 @@
           font-size: $font-semi;
           font-weight: $font-default;
           letter-spacing: $letter-medium;
-          letter-spacing: $letter-small;
           color: $color-gray;
           padding-left: $padding-extra-small;
         }
@@ -499,13 +655,11 @@
         align-items: center;
         justify-content: center;
         gap: 0.65rem;
-        gap: 0.45rem;
         font-size: $font-regular;
         color: $color-white;
         font-weight: $font-semi-bold;
         letter-spacing: $letter-medium;
         word-spacing: $word-medium;
-        word-spacing: $word-small;
 
         &-icon {
           font-size: $font-semi;
@@ -557,13 +711,11 @@
   &__button {
     position: absolute;
     top: 8.1%;
-    top: 8.5%;
     left: 1.25%;
     font-size: $font-semi;
     letter-spacing: $letter-medium;
     word-spacing: $word-small;
     font-family: $font-serif;
-    font-family: $font-rubik;
     padding: $padding-extra-small $padding-big;
     cursor: pointer;
     z-index: 9999;
@@ -588,7 +740,7 @@
   height: 85rem;
   opacity: 0.625;
   filter: contrast(165%) drop-shadow(0.25rem 0.25rem 0.75rem $color-black);
-  margin: $margin-medium 0;
+  margin: $margin-extra-big 0;
 
   &-content {
     display: flex;

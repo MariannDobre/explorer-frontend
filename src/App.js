@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './home/home';
 import LogIn from './auth/login';
 import SignUp from './auth/signup';
-import Tours from './tours';
+import Tours from './tours/tours';
 import UserProfile from './auth/auth';
 import PrivateRoute from './auth/privateRoute';
 

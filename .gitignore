@@ -27,4 +27,4 @@ yarn-error.log*
 /src/data
 /src/auth
 /src/images
-/src/config.env
+/src/.env

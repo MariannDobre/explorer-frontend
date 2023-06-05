@@ -8,7 +8,7 @@
   color: $text-color;
   background-color: $bg-color;
   border-radius: $border-rounded-extra-small;
-  width: 24rem;
+  width: 27.5rem;
   height: 4.5rem;
   padding: 0.4rem 0;
   border: none;
@@ -95,14 +95,16 @@
   outline: none;
   font-size: $font-medium;
   background-color: $color-btn-primary;
-  padding: 1.475rem $padding-extra-big;
+  padding: 1.475rem 0;
   cursor: pointer;
   text-align: center;
   filter: drop-shadow(0.25rem 0.25rem 0.45rem $color-black);
   text-decoration: none;
   border-radius: $border-rounded-extra-small;
+  letter-spacing: $letter-small;
   transition: all 0.55s;
   height: 5.6rem;
+  width: 35rem;
   &:hover {
     transform: scale(1.045);
     background-color: $color-secondary;
