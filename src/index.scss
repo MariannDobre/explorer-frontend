@@ -21,13 +21,13 @@ body {
 
 $color-btn-primary: #077553;
 
-$color-primary: #087f5b;
-$color-secondary: #52a58c;
+$color-primary: #087d5a;
+$color-secondary: #51a48b;
 $color-extra: #36cea1;
 
 $color-white: #fff;
 $color-black: #000;
-$color-dark: #495057;
+$color-dark: #212121;
 
 $color-gray: #dee2e6;
 $color-gray-dark: #adb5bd;
@@ -50,7 +50,7 @@ $font-semi: 2rem;
 $font-medium: 2.4rem;
 $font-big: 3.2rem;
 $font-extra-big: 4.8rem;
-$font-large: 6.4rem;
+$font-large: 6rem;
 
 $letter-small: 0.1rem;
 $letter-medium: 0.15rem;
@@ -82,3 +82,10 @@ $margin-medium: 2.4rem;
 $margin-big: 3.6rem;
 $margin-extra-big: 5rem;
 $margin-large: 6rem;
+
+// SELECTION STYLES
+
+::selection {
+  background-color: $color-black;
+  color: $color-extra;
+}

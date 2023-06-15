@@ -2,55 +2,42 @@
 @import '../../mixins.scss';
 
 .login__container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &-bg {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    overflow: hidden;
-  }
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsla(130, 22%, 84%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(161, 43%, 32%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(145, 85%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(144, 18%, 93%, 0.97) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(105, 67%, 78%, 0.92) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(137, 100%, 42%, 0.42) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(161, 50%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(159, 81%, 78%, 1) 0px, transparent 50%);
+  background-size: 150% 150% !important;
+  animation: wavey 9s ease infinite;
 
   &-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    transform: translate(0, -50%);
     z-index: 10;
-    background-color: rgba($color-white, 0.735);
-    border-radius: $border-rounded-small;
-    border-width: 0.4rem;
-    border-style: solid;
-    border-image: linear-gradient(
-        135deg,
-        $color-white,
-        $color-primary,
-        $color-white,
-        $color-primary
-      )
-      1;
-    border-image-slice: 1;
+    background-color: rgba($color-dark, 0.95);
+    border: none;
     padding: $padding-big;
-    box-shadow: 0 0.75rem 1.5rem 0 rgba($color-black, 0.5);
+    box-shadow: 0 1.75rem 3.5rem 0 rgba($color-black, 0.65);
+    border-radius: $border-rounded-extra-small;
 
     &-header {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 0.75rem;
 
       &-title {
         font-size: $font-big;
@@ -65,8 +52,8 @@
         letter-spacing: $letter-small;
         word-spacing: $word-medium;
         font-weight: $font-default;
-        margin-bottom: $margin-medium;
-        color: $color-secondary;
+        margin-bottom: $margin-large;
+        color: lighten($color-primary, 17.5%);
       }
     }
 
@@ -75,7 +62,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: $margin-big;
+      margin-bottom: $margin-extra-big;
 
       &-placeholders {
         display: flex;
@@ -83,7 +70,7 @@
         justify-content: center;
         text-align: center;
         gap: 0.85rem;
-        color: $color-secondary;
+        color: lighten($color-primary, 17.5%);
         font-size: $font-regular;
         font-weight: $font-semi-bold;
         letter-spacing: $letter-medium;
@@ -108,24 +95,212 @@
 
 // BUTTONS
 
-.login__container-form-buttons-submit {
-  @include button-styles($color-btn-primary, $color-white);
-}
-
-.login__container-form-buttons-create {
-  @include button-styles($color-btn-primary, $color-white);
-}
-
+.login__container-form-buttons-submit,
+.login__container-form-buttons-create,
 .login__container-form-buttons-without {
-  @include button-styles($color-btn-primary, $color-white);
+  @include input-button-styles($color-btn-primary, $color-white);
 }
 
 // INPUTS
 
-.login__container-form-inputs-email {
+.login__container-form-inputs-email,
+.login__container-form-inputs-password {
   @include input-styles($color-primary);
 }
 
-.login__container-form-inputs-password {
-  @include input-styles($color-primary);
+// BACKGROUND ANIMATION
+
+@keyframes wavey {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// MEDIA
+// BIG TABLETS
+
+@media (max-width: 1280px) {
+  .login__container {
+    &-form {
+      &-header {
+        gap: 0.65rem;
+
+        &-title {
+          font-size: 2.75rem;
+          word-spacing: $word-big;
+        }
+
+        &-subtitle {
+          font-size: 2.25rem;
+          word-spacing: $word-big;
+          margin-bottom: $margin-extra-big;
+        }
+      }
+
+      &-inputs {
+        &-placeholders {
+          gap: 1rem;
+          font-size: 1.45rem;
+          letter-spacing: $letter-big;
+          margin-bottom: $margin-small;
+
+          &-icons {
+            font-size: 2.45rem;
+          }
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.25rem;
+      }
+    }
+  }
+
+  .login__container-form-buttons-submit,
+  .login__container-form-buttons-create,
+  .login__container-form-buttons-without {
+    @include input-button-styles($color-btn-primary, $color-white);
+    width: 22.5rem;
+  }
+
+  .login__container-form-inputs-email,
+  .login__container-form-inputs-password {
+    @include input-styles($color-primary);
+    width: 22.5rem;
+  }
+}
+
+// SMALL TABLETS
+
+@media (max-width: 968px) {
+  .login__container {
+    &-form {
+      padding: $padding-big;
+
+      &-header {
+        gap: 0.5rem;
+
+        &-title {
+          font-size: 2.2rem;
+          word-spacing: none;
+        }
+
+        &-subtitle {
+          font-size: 1.85rem;
+          word-spacing: none;
+          margin-bottom: $margin-extra-big;
+        }
+      }
+
+      &-inputs {
+        margin-bottom: $margin-big;
+
+        &-placeholders {
+          gap: 1rem;
+          font-size: 1.45rem;
+          letter-spacing: $letter-big;
+          margin-bottom: $margin-small;
+
+          &-icons {
+            font-size: 2.45rem;
+          }
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.25rem;
+      }
+    }
+  }
+
+  .login__container-form-buttons-submit,
+  .login__container-form-buttons-create,
+  .login__container-form-buttons-without {
+    @include input-button-styles($color-btn-primary, $color-white);
+    width: 21.25rem;
+    font-size: 1.4rem;
+  }
+
+  .login__container-form-inputs-email,
+  .login__container-form-inputs-password {
+    @include input-styles($color-primary);
+    width: 21.25rem;
+    font-size: 1.4rem;
+  }
+}
+
+// MOBILE
+
+@media (max-width: 480px) {
+  .login__container {
+    &-form {
+      padding: $padding-medium;
+
+      &-header {
+        gap: 0.5rem;
+
+        &-title {
+          font-size: 2.2rem;
+          word-spacing: none;
+        }
+
+        &-subtitle {
+          font-size: 1.85rem;
+          word-spacing: none;
+          margin-bottom: $margin-extra-big;
+        }
+      }
+
+      &-inputs {
+        margin-bottom: $margin-big;
+
+        &-placeholders {
+          gap: 1rem;
+          font-size: 1.45rem;
+          letter-spacing: $letter-big;
+          margin-bottom: $margin-small;
+
+          &-icons {
+            font-size: 2.45rem;
+          }
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.25rem;
+      }
+    }
+  }
+
+  .login__container-form-buttons-submit,
+  .login__container-form-buttons-create,
+  .login__container-form-buttons-without {
+    @include input-button-styles($color-btn-primary, $color-white);
+    width: 20rem;
+    font-size: 1.4rem;
+  }
+
+  .login__container-form-inputs-email,
+  .login__container-form-inputs-password {
+    @include input-styles($color-primary);
+    width: 20rem;
+  }
 }

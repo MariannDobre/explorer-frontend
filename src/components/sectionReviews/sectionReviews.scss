@@ -1,0 +1,647 @@
+@import '../../index.scss';
+@import '../../mixins.scss';
+
+// SECTION REVIEWS
+
+.section__reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 $padding-big;
+  margin: 50rem 0 25rem 0;
+  gap: 12.5rem;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25rem;
+
+    &-title {
+      font-size: $font-semi;
+      background: linear-gradient(
+        125deg,
+        lighten($color-secondary, 15%),
+        lighten($color-primary, 0.5%),
+        lighten($color-primary, 2.5%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: $letter-small;
+      word-spacing: $word-big;
+      margin-bottom: $margin-extra-small;
+    }
+
+    &-subtitle {
+      color: $color-white;
+      white-space: pre-line;
+      font-size: $font-extra-big;
+      letter-spacing: $letter-medium;
+      word-spacing: $word-big;
+      width: 50rem;
+      line-height: 1.4;
+
+      span {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(4, 50%);
+    grid-template-rows: 1fr;
+    overflow-x: scroll;
+    overflow-y: none;
+    margin-left: 25rem;
+    width: 134rem;
+    column-gap: 11.5rem;
+    padding: $padding-medium 0;
+    height: 67.5rem;
+
+    &-content {
+      background-color: $color-dark;
+      border-radius: $border-rounded-extra-small;
+      padding: $padding-medium;
+    }
+
+    &-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1rem;
+      margin-bottom: $margin-extra-big;
+
+      &-name {
+        font-size: $font-semi;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        color: $color-primary;
+        margin-bottom: $margin-extra-small;
+      }
+
+      &-location {
+        font-size: 1.75rem;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        color: $color-white;
+        margin-left: 1.5rem;
+        margin-bottom: 1.75rem;
+      }
+
+      &-score {
+        font-size: $font-regular;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        color: $color-gray;
+        margin-left: 3rem;
+        margin-bottom: $margin-extra-small;
+
+        span {
+          color: $color-primary;
+        }
+      }
+
+      &-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: $border-rounded-extra-small;
+        padding: 0.25rem 1.25rem;
+        margin-left: 3rem;
+        background-color: $color-btn-primary;
+        color: $color-white;
+        font-size: $font-regular;
+        font-weight: $font-semi-bold;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        filter: drop-shadow(0 0 0.25rem $color-black);
+        transition: all 0.55s;
+
+        &:hover {
+          background-color: $color-secondary;
+          filter: drop-shadow(0 0 0.35rem $color-black);
+        }
+      }
+
+      &-image {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        filter: drop-shadow(0 0 0.75rem $color-black);
+      }
+    }
+
+    &-description {
+      font-size: $font-semi;
+      color: $color-white;
+      position: relative;
+      line-height: 1.55;
+      letter-spacing: $letter-small;
+
+      span {
+        position: absolute;
+        font-size: 10rem;
+        color: $color-primary;
+        top: -7.5rem;
+        left: -2rem;
+      }
+    }
+  }
+}
+
+// MEDIA
+// LAPTOPS
+
+@media (max-width: 1720px) {
+  .section__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 $padding-big;
+    margin: 50rem 0 25rem 0;
+    gap: 10rem;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      margin-left: 13.75rem;
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+      overflow-x: none;
+      overflow-y: scroll;
+      margin-left: 13.75rem;
+      width: 118.5rem;
+      column-gap: 0;
+      row-gap: 38.5rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-medium;
+      }
+
+      &-header {
+        &-image {
+          width: 17.5rem;
+          height: 17.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.9rem;
+        line-height: 1.6;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        width: 50rem;
+
+        span {
+          font-size: 8.5rem;
+          top: -7.25rem;
+          left: -1.75rem;
+        }
+      }
+    }
+  }
+}
+
+// LAPTOPS/BIG TABLETS
+
+@media (max-width: 1440px) {
+  .section__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 $padding-big;
+    margin: 50rem 0 25rem 0;
+    gap: 10rem;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      margin-left: 9.5rem;
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+      overflow-x: none;
+      overflow-y: scroll;
+      margin-left: 9.5rem;
+      width: 100rem;
+      column-gap: 0;
+      row-gap: 35rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-medium;
+      }
+
+      &-header {
+        &-name {
+          font-size: 1.875rem;
+        }
+
+        &-location {
+          font-size: 1.7rem;
+        }
+
+        &-image {
+          width: 16rem;
+          height: 16rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.8rem;
+        line-height: 1.55;
+        letter-spacing: $letter-small;
+        word-spacing: $word-big;
+        width: 43.5rem;
+
+        span {
+          font-size: 7.5rem;
+          top: -6.75rem;
+          left: -1.75rem;
+        }
+      }
+    }
+  }
+}
+
+// TABLETS
+
+@media (max-width: 1240px) {
+  .section__reviews {
+    margin: 50rem 0 17.5rem 0;
+    gap: 10rem;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      margin-left: 9.5rem;
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      overflow-x: none;
+      overflow-y: scroll;
+      margin-left: 9.5rem;
+      width: 85rem;
+      column-gap: 0;
+      row-gap: 3.5rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-medium;
+      }
+
+      &-header {
+        &-name {
+          font-size: 1.875rem;
+        }
+
+        &-location {
+          font-size: 1.7rem;
+        }
+
+        &-image {
+          width: 14.5rem;
+          height: 14.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.75rem;
+        line-height: 1.5;
+        letter-spacing: $letter-small;
+        word-spacing: $word-medium;
+        width: 77.5rem;
+
+        span {
+          font-size: 7rem;
+          top: -6.5rem;
+          left: -1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50rem 0 15rem 0;
+    gap: 0;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-left: -23.5rem;
+
+      &-title {
+        font-size: 1.9rem;
+        word-spacing: $word-medium;
+      }
+
+      &-subtitle {
+        font-size: 3rem;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 27.5rem;
+      }
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      overflow-x: none;
+      overflow-y: scroll;
+      margin-left: 0;
+      width: 55rem;
+      column-gap: 0;
+      row-gap: 3.5rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-medium;
+      }
+
+      &-header {
+        &-name {
+          font-size: 1.65rem;
+        }
+
+        &-location {
+          font-size: 1.5rem;
+          margin-left: 1.25rem;
+          margin-bottom: 1.05rem;
+        }
+
+        &-score {
+          margin-left: 1.25rem;
+        }
+
+        &-button {
+          margin-left: 0;
+        }
+
+        &-image {
+          width: 10.5rem;
+          height: 10.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.65rem;
+        line-height: 1.4;
+        letter-spacing: $letter-small;
+        word-spacing: $word-small;
+        width: 47.5rem;
+
+        span {
+          font-size: 7rem;
+          top: -6.5rem;
+          left: -1.25rem;
+        }
+      }
+    }
+  }
+}
+
+//
+
+@media (max-width: 968px) {
+  .section__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $padding-big;
+    margin: 50rem 0 15rem 0;
+    gap: 0;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      margin-left: -6.5rem;
+
+      &-title {
+        font-size: 1.75rem;
+        word-spacing: $word-medium;
+        letter-spacing: $letter-small;
+      }
+
+      &-subtitle {
+        font-size: $font-medium;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 27.5rem;
+      }
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      margin-left: 0;
+      width: 35rem;
+      column-gap: 0;
+      row-gap: 3rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-small;
+      }
+
+      &-header {
+        &-name {
+          font-size: 1.65rem;
+        }
+
+        &-location {
+          font-size: 1.5rem;
+          margin-left: 1.25rem;
+          margin-bottom: 1.05rem;
+        }
+
+        &-score {
+          margin-left: 1.25rem;
+        }
+
+        &-button {
+          margin-left: 0;
+        }
+
+        &-image {
+          width: 10.5rem;
+          height: 10.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.65rem;
+        line-height: 1.45;
+        letter-spacing: none;
+        word-spacing: $word-small;
+        width: 30rem;
+
+        span {
+          font-size: 6.5rem;
+          top: -5.5rem;
+          left: -0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE
+
+@media (max-width: 480px) {
+  .section__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 $padding-big;
+    margin: 50rem 0 15rem 0;
+    gap: 0;
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+
+      &-title {
+        font-size: 1.75rem;
+        word-spacing: $word-medium;
+        letter-spacing: $letter-small;
+      }
+
+      &-subtitle {
+        font-size: $font-medium;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 27.5rem;
+      }
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      margin-left: 0;
+      width: 35rem;
+      column-gap: 0;
+      row-gap: 3rem;
+      padding: $padding-medium 0;
+      height: 67.5rem;
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+      }
+
+      &-content {
+        background-color: $color-dark;
+        border-radius: $border-rounded-extra-small;
+        padding: $padding-small;
+      }
+
+      &-header {
+        &-name {
+          font-size: 1.65rem;
+        }
+
+        &-location {
+          font-size: 1.5rem;
+          margin-left: 1.25rem;
+          margin-bottom: 1.05rem;
+        }
+
+        &-score {
+          margin-left: 1.25rem;
+        }
+
+        &-button {
+          margin-left: 0;
+        }
+
+        &-image {
+          width: 10.5rem;
+          height: 10.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1.65rem;
+        line-height: 1.45;
+        letter-spacing: none;
+        word-spacing: $word-small;
+        width: 30rem;
+
+        span {
+          font-size: 6.5rem;
+          top: -5.5rem;
+          left: -0.5rem;
+        }
+      }
+    }
+  }
+}

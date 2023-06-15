@@ -16,3 +16,37 @@
     color: $color-white;
   }
 }
+
+// MEDIA
+// LAPTOPS/BIG TABLETS
+
+@media (max-width: 1280px) {
+  .home__button {
+    font-size: $font-semi;
+  }
+}
+
+// TABLETS
+
+@media (max-width: 1024px) {
+  .home__button {
+    font-size: 1.85rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .home__button {
+    display: none;
+  }
+}
+
+// MOBILE
+
+@media (max-width: 480px) {
+  .home__button {
+    display: block;
+    font-size: 1.85rem;
+    margin: 0;
+  }
+}

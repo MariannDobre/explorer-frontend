@@ -7,13 +7,13 @@ import {
 } from 'firebase/auth';
 import { auth } from '../firebase';
 import { Link, useNavigate } from 'react-router-dom';
-import video from './video/login-bg.mp4';
 import { AiFillMail } from 'react-icons/ai';
 import { RiLock2Fill } from 'react-icons/ri';
 import './styles/login.scss';
 
 function LogIn() {
   // LOGIN STATE AND FUNCTION
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -51,14 +51,6 @@ function LogIn() {
         <Helmet>
           <title>Explorer | LogIn</title>
         </Helmet>
-
-        <video
-          className='login__container-bg'
-          src={video}
-          autoPlay
-          loop
-          muted
-        ></video>
 
         <form className='login__container-form' onSubmit={loggedIn}>
           <div className='login__container-form-header'>

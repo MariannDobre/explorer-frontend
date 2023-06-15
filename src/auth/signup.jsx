@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
-import video from './video/test-video.mp4';
 import { AiFillMail } from 'react-icons/ai';
 import { RiLock2Fill } from 'react-icons/ri';
 import './styles/signup.scss';
@@ -12,12 +11,20 @@ function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigateTo = useNavigate();
+
   const signedUp = (event) => {
     event.preventDefault();
+
+    if (email.trim() === '' || password.trim() === '') {
+      alert(`Please fill all the inputs with valid data`);
+      return;
+    }
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        navigateTo('/');
       })
       .catch((error) => {
         console.log(`Error: ${error.message}`);
@@ -31,24 +38,14 @@ function SignUp() {
           <title>Explorer | SignUp</title>
         </Helmet>
 
-        <video
-          className='signup__container-bg'
-          src={video}
-          autoPlay
-          loop
-          muted
-        ></video>
-
         <form className='signup__container-form' onSubmit={signedUp}>
           <div className='signup__container-form-header'>
             <h2 className='signup__container-form-header-title'>
               Welcome Dear Friend
             </h2>
+
             <p className='signup__container-form-header-subtitle'>
               To Explorer
-            </p>
-            <p className='signup__container-form-header-additional'>
-              Create an account to continue
             </p>
           </div>
 

@@ -1,0 +1,348 @@
+@import '../../index.scss';
+@import '../../mixins.scss';
+
+// SECTION ABOUT
+
+.section__about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27.5rem;
+  padding: $padding-large $padding-big;
+  margin: 12.5rem 0 25rem 0;
+  position: relative;
+  z-index: 1;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &-title {
+      font-size: $font-semi;
+      background: linear-gradient(
+        125deg,
+        lighten($color-secondary, 15%),
+        lighten($color-primary, 0.5%),
+        lighten($color-primary, 2.5%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: $letter-small;
+      word-spacing: $word-big;
+      margin-bottom: $margin-extra-small;
+    }
+
+    &-subtitle {
+      color: $color-white;
+      white-space: pre-line;
+      font-size: $font-extra-big;
+      letter-spacing: $letter-medium;
+      word-spacing: $word-big;
+      margin-bottom: 8.5rem;
+      width: 50rem;
+      line-height: 1.4;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+      column-gap: 17.5rem;
+      row-gap: 5rem;
+      place-items: start;
+      width: 30rem;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.25rem;
+
+        &-icon {
+          width: 6rem;
+          height: 6rem;
+          color: $color-primary;
+        }
+
+        &-title {
+          text-align: start;
+          width: 27.5rem;
+          font-size: $font-semi;
+          color: $color-white;
+          letter-spacing: $letter-medium;
+          word-spacing: $word-big;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  &-body {
+    width: 37.5rem;
+    height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      width: 37.5rem;
+      height: 55rem;
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 0 1rem $color-black);
+    }
+  }
+}
+
+// MEDIA
+// LAPTOPS
+
+@media (max-width: 1580px) {
+}
+
+// LAPTOPS/BIG TABLETS
+
+@media (max-width: 1280px) {
+  .section__about {
+    gap: 22.5rem;
+    padding: $padding-large $padding-medium;
+
+    &-header {
+      &-title {
+        font-size: $font-semi;
+        word-spacing: $word-big;
+      }
+
+      &-subtitle {
+        font-size: $font-big;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 42.5rem;
+      }
+
+      &-body {
+        column-gap: 15rem;
+        row-gap: 4.75rem;
+        width: 27.5rem;
+
+        &-content {
+          gap: 1.15rem;
+
+          &-icon {
+            width: 4.75rem;
+            height: 4.75rem;
+          }
+
+          &-title {
+            width: 26.5rem;
+            font-size: 1.9rem;
+            letter-spacing: $letter-medium;
+            word-spacing: $word-medium;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &-body {
+      width: 28.5rem;
+      height: 50rem;
+
+      &-image {
+        width: 28.5rem;
+        height: 50rem;
+      }
+    }
+  }
+}
+
+// TABLETS
+
+@media (max-width: 1024px) {
+  .section__about {
+    gap: 18.5rem;
+    padding: $padding-large $padding-medium;
+
+    &-header {
+      &-title {
+        font-size: 1.9rem;
+        word-spacing: $word-medium;
+      }
+
+      &-subtitle {
+        font-size: 3rem;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 37.5rem;
+      }
+
+      &-body {
+        column-gap: 13.5rem;
+        row-gap: 4.5rem;
+        width: 25rem;
+
+        &-content {
+          gap: 1.1rem;
+
+          &-icon {
+            width: 4.5rem;
+            height: 4.5rem;
+          }
+
+          &-title {
+            width: 25rem;
+            font-size: 1.85rem;
+            letter-spacing: $letter-medium;
+            word-spacing: $word-medium;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &-body {
+      width: 26.5rem;
+      height: 46.5rem;
+
+      &-image {
+        width: 26.5rem;
+        height: 46.5rem;
+      }
+    }
+  }
+}
+
+// TABLETS
+
+@media (max-width: 968px) {
+  .section__about {
+    gap: 18.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-large $padding-medium;
+    margin: 12.5rem 0 15.5rem 0;
+
+    &-header {
+      &-title {
+        font-size: 1.75rem;
+        word-spacing: $word-medium;
+        letter-spacing: $letter-small;
+      }
+
+      &-subtitle {
+        font-size: $font-medium;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 32.5rem;
+      }
+
+      &-body {
+        column-gap: 6.5rem;
+        row-gap: 4.75rem;
+        width: 25rem;
+
+        &-content {
+          gap: 1rem;
+
+          &-icon {
+            width: 3.75rem;
+            height: 3.75rem;
+          }
+
+          &-title {
+            width: 13.5rem;
+            font-size: 1.7rem;
+            letter-spacing: $letter-small;
+            word-spacing: $word-small;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22.5rem;
+      height: 40rem;
+
+      &-image {
+        width: 22.5rem;
+        height: 40rem;
+      }
+    }
+  }
+}
+
+// MOBILE
+
+@media (max-width: 480px) {
+  .section__about {
+    gap: 18.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-large $padding-medium;
+    margin: 12.5rem 0 15.5rem 0;
+
+    &-header {
+      &-title {
+        font-size: 1.75rem;
+        word-spacing: $word-medium;
+        letter-spacing: $letter-small;
+      }
+
+      &-subtitle {
+        font-size: $font-medium;
+        word-spacing: $word-medium;
+        margin-bottom: 8.5rem;
+        width: 32.5rem;
+      }
+
+      &-body {
+        column-gap: 6.5rem;
+        row-gap: 4.75rem;
+        width: 25rem;
+
+        &-content {
+          gap: 1rem;
+
+          &-icon {
+            width: 3.75rem;
+            height: 3.75rem;
+          }
+
+          &-title {
+            width: 13.5rem;
+            font-size: 1.7rem;
+            letter-spacing: $letter-small;
+            word-spacing: $word-small;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22.5rem;
+      height: 40rem;
+
+      &-image {
+        width: 22.5rem;
+        height: 40rem;
+      }
+    }
+  }
+}
